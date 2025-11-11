@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Red T-Shirt",
+    "category": "Clothing",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?tshirt,red"
+  },
+  {
+    "id": 2,
+    "name": "Blue Jeans",
+    "category": "Clothing",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?jeans,blue"
+  },
+  {
+    "id": 3,
+    "name": "Black Hoodie",
+    "category": "Clothing",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?hoodie,black"
+  },
+  {
+    "id": 4,
+    "name": "White Sneakers",
+    "category": "Clothing",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?sneakers,white"
+  },
+  {
+    "id": 5,
+    "name": "Leather Jacket",
+    "category": "Clothing",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?jacket,leather"
+  },
+  {
+    "id": 6,
+    "name": "Summer Dress",
+    "category": "Clothing",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?dress,summer"
+  },
+  {
+    "id": 7,
+    "name": "Running Shoes",
+    "category": "Clothing",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?running,shoes"
+  },
+  {
+    "id": 8,
+    "name": "Backpack",
+    "category": "Accessories",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?backpack"
+  },
+  {
+    "id": 9,
+    "name": "Sunglasses",
+    "category": "Accessories",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?sunglasses"
+  },
+  {
+    "id": 10,
+    "name": "Wristwatch",
+    "category": "Accessories",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?watch"
+  },
+  {
+    "id": 11,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?headphones,wireless"
+  },
+  {
+    "id": 12,
+    "name": "Smartphone",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?smartphone"
+  },
+  {
+    "id": 13,
+    "name": "Laptop",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?laptop"
+  },
+  {
+    "id": 14,
+    "name": "Smartwatch",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?smartwatch"
+  },
+  {
+    "id": 15,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?speaker,bluetooth"
+  },
+  {
+    "id": 16,
+    "name": "Gaming Mouse",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?mouse,gaming"
+  },
+  {
+    "id": 17,
+    "name": "4K Monitor",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?monitor,4k"
+  },
+  {
+    "id": 18,
+    "name": "Tablet",
+    "category": "Electronics",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?tablet"
+  },
+  {
+    "id": 19,
+    "name": "Sofa",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?sofa"
+  },
+  {
+    "id": 20,
+    "name": "Coffee Table",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?coffee,table"
+  },
+  {
+    "id": 21,
+    "name": "Dining Chair",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?chair,dining"
+  },
+  {
+    "id": 22,
+    "name": "Bookshelf",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?bookshelf"
+  },
+  {
+    "id": 23,
+    "name": "Office Desk",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?desk,office"
+  },
+  {
+    "id": 24,
+    "name": "Bed Frame",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?bed,frame"
+  },
+  {
+    "id": 25,
+    "name": "Floor Lamp",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?lamp,floor"
+  },
+  {
+    "id": 26,
+    "name": "Office Chair",
+    "category": "Furniture",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?chair,office"
+  },
+  {
+    "id": 27,
+    "name": "Blender",
+    "category": "Home & Kitchen",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?blender"
+  },
+  {
+    "id": 28,
+    "name": "Coffee Maker",
+    "category": "Home & Kitchen",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?coffee,maker"
+  },
+  {
+    "id": 29,
+    "name": "Air Fryer",
+    "category": "Home & Kitchen",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?air,fryer"
+  },
+  {
+    "id": 30,
+    "name": "Vacuum Cleaner",
+    "category": "Home",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?vacuum"
+  },
+  {
+    "id": 31,
+    "name": "Microwave Oven",
+    "category": "Home & Kitchen",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?microwave,oven"
+  },
+  {
+    "id": 32,
+    "name": "Toaster",
+    "category": "Home & Kitchen",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?toaster"
+  },
+  {
+    "id": 33,
+    "name": "Yoga Mat",
+    "category": "Sports & Outdoors",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?yoga,mat"
+  },
+  {
+    "id": 34,
+    "name": "Mountain Bike Helmet",
+    "category": "Sports & Outdoors",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?helmet,bike"
+  },
+  {
+    "id": 35,
+    "name": "Water Bottle",
+    "category": "Sports & Outdoors",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?bottle,water"
+  },
+  {
+    "id": 36,
+    "name": "Tennis Racket",
+    "category": "Sports & Outdoors",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?tennis,racket"
+  },
+  {
+    "id": 37,
+    "name": "Fitness Tracker",
+    "category": "Sports & Outdoors",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?fitness,tracker"
+  },
+  {
+    "id": 38,
+    "name": "Hair Dryer",
+    "category": "Beauty",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?hair,dryer"
+  },
+  {
+    "id": 39,
+    "name": "Electric Toothbrush",
+    "category": "Beauty",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?toothbrush,electric"
+  },
+  {
+    "id": 40,
+    "name": "Face Serum",
+    "category": "Beauty",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?serum,face"
+  },
+  {
+    "id": 41,
+    "name": "Makeup Kit",
+    "category": "Beauty",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?makeup,kit"
+  },
+  {
+    "id": 42,
+    "name": "Drone",
+    "category": "Toys & Games",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?drone"
+  },
+  {
+    "id": 43,
+    "name": "Action Figure",
+    "category": "Toys & Games",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?action,figure"
+  },
+  {
+    "id": 44,
+    "name": "Board Game",
+    "category": "Toys & Games",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?board,game"
+  },
+  {
+    "id": 45,
+    "name": "Jigsaw Puzzle",
+    "category": "Toys & Games",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?puzzle,jigsaw"
+  },
+  {
+    "id": 46,
+    "name": "Car Phone Mount",
+    "category": "Automotive",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?car,phone,mount"
+  },
+  {
+    "id": 47,
+    "name": "Seat Cover",
+    "category": "Automotive",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?seat,cover"
+  },
+  {
+    "id": 48,
+    "name": "Tire Inflator",
+    "category": "Automotive",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?tire,inflator"
+  },
+  {
+    "id": 49,
+    "name": "Novel",
+    "category": "Books",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?book,novel"
+  },
+  {
+    "id": 50,
+    "name": "Cookbook",
+    "category": "Books",
+    "imageUrl": "https://source.unsplash.com/random/300x300/?book,cookbook"
+  }
+]
