@@ -73,7 +73,8 @@ app.get('/api/fetch-image', async (req, res) => {
   try {
     const provided = req.header('x-api-password') || req.query.password || '';
     const password = API_PASSWORD();
-    if (!password || provided !== password) {
+    // Only enforce password when it's actually set
+    if (password && provided !== password) {
       return res.status(401).json({ error: 'Unauthorized: invalid or missing password' });
     }
     const url = String(req.query.url || '').trim();
@@ -99,7 +100,8 @@ app.get('/api/page-image', async (req, res) => {
   try {
     const provided = req.header('x-api-password') || req.query.password || '';
     const password = API_PASSWORD();
-    if (!password || provided !== password) {
+    // Only enforce password when it's actually set
+    if (password && provided !== password) {
       return res.status(401).json({ error: 'Unauthorized: invalid or missing password' });
     }
     const pageUrl = String(req.query.url || '').trim();
@@ -141,7 +143,8 @@ app.get('/api/search', async (req, res) => {
   try {
     const provided = req.header('x-api-password') || req.query.password || '';
     const password = API_PASSWORD();
-    if (!password || provided !== password) {
+    // Only enforce password when it's actually set
+    if (password && provided !== password) {
       return res.status(401).json({ error: 'Unauthorized: invalid or missing password' });
     }
     const key = UNSPLASH_ACCESS_KEY();

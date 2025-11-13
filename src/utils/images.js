@@ -4,19 +4,17 @@ export async function fetchImagesForQuery(query, count = DEFAULT_COUNT) {
   const proxyUrl = process.env.REACT_APP_PROXY_URL || 'http://localhost:5000/api/search';
   const password = process.env.REACT_APP_API_PASSWORD || '';
 
-  if (password) {
-    try {
-      const res = await fetch(`${proxyUrl}?query=${encodeURIComponent(query)}&per_page=${count}`, {
-        headers: { 'X-API-PASSWORD': password },
-      });
-      if (res.ok) {
-        const data = await res.json();
-        const items = (data.items || []).filter((i) => !!i.imageUrl);
-        if (items.length) return items;
-      }
-    } catch (error) {
-      console.error('Proxy fetch failed, falling back to Picsum:', error);
+  // Always attempt proxy first; include password header only if provided.
+  try {
+    const headers = password ? { 'X-API-PASSWORD': password } : {};
+    const res = await fetch(`${proxyUrl}?query=${encodeURIComponent(query)}&per_page=${count}`, { headers });
+    if (res.ok) {
+      const data = await res.json();
+      const items = (data.items || []).filter((i) => !!i.imageUrl);
+      if (items.length) return items;
     }
+  } catch (error) {
+    console.error('Proxy fetch failed, falling back to Picsum:', error);
   }
 
   // Fallback: deterministic Picsum when no password/proxy available
