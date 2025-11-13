@@ -1,28 +1,85 @@
-# Visual Product Matcher
+# 🎨 Visual Product Matcher  
 
-Find visually similar items by uploading an image or pasting a URL. Results are fetched via a small Express proxy and ranked using MobileNet embeddings with cosine similarity. The proxy protects secrets and resolves page URLs to actual images, avoiding ORB/CORS issues. Category chips let you refine results when detection is ambiguous.
+Find visually similar items by uploading an image or pasting a URL. Results are ranked using **MobileNet embeddings + cosine similarity** for robust visual relevance.  
 
-## Setup
-- Install dependencies: `npm install`.
-- Server `.env` (encrypt before sharing):
-  - `UNSPLASH_ACCESS_KEY=...`
-  - `API_PASSWORD=...`
-- Client `.env`:
-  - `REACT_APP_PROXY_URL=http://localhost:5000/api/search`
-  - `REACT_APP_API_PASSWORD=...`
-- Encrypt server env: `npm run encrypt-env` → creates `.env.enc`. Keep `.env` private.
-- Start servers:
-  - Proxy: `npm run server`
-  - App: `npm start` → open `http://localhost:3000`
+An **Express proxy** protects secrets and resolves page URLs to actual images, avoiding ORB/CORS issues. Category chips let you refine results when detection is ambiguous.  
 
-## Image URLs and Preview
-Image previews use the proxy to prevent browser blocks:
-- `GET /api/fetch-image?url=...` for direct image URLs.
-- `GET /api/page-image?url=...` to extract `og:image`/first `<img>` from pages.
-If resolution fails, a safe Picsum placeholder is shown.
+---
 
-## Brief Write‑Up (≤200 words)
-This app combines a secure backend with robust visual search. An Express proxy keeps the Unsplash key server‑side and requires a password, preventing secret leakage. The proxy exposes image‑fetch endpoints that stream bytes with correct headers, so pasted product pages render as previews without ORB/CORS errors. On the client, MobileNet embeddings are computed for the uploaded image and candidate results, and cosine similarity ranks items for better visual relevance than simple labels. Detected labels seed precise Unsplash queries, while category chips let users override ambiguous detection. The UI is minimal and responsive, with a gradient background, safe image fallbacks, and clear status messaging. Secrets are distributed as `.env.enc` via AES‑GCM; the server unlocks with a passphrase at startup. The repository ignores build artifacts and caches to keep history clean.
+## 🚀 Features
+- 🔍 **Image-based search**: Upload or paste a URL to find visually similar products  
+- 🛡️ **Secure backend**: Express proxy hides API keys and prevents CORS issues  
+- 📊 **Smart ranking**: MobileNet embeddings + cosine similarity for accurate matches  
+- 🎛️ **Category refinement**: Chips to override ambiguous detections  
+- 📱 **Responsive UI**: Minimal, gradient background, safe fallbacks, clear status messaging  
 
-## Repository
-GitHub: https://github.com/YEGNESWAR07/Visual-Product-Matcher
+---
+
+## ⚙️ Setup  
+
+### 1. Install dependencies  
+```bash
+npm install
+```
+
+### 2. Configure environment variables  
+**Server `.env` (encrypt before sharing):**
+```env
+UNSPLASH_ACCESS_KEY=...
+API_PASSWORD=...
+```
+
+**Client `.env`:**
+```env
+REACT_APP_PROXY_URL=http://localhost:5000/api/search
+REACT_APP_API_PASSWORD=...
+```
+
+Encrypt server env:  
+```bash
+npm run encrypt-env
+```
+→ creates `.env.enc`. Keep `.env` private.  
+
+### 3. Start servers  
+```bash
+# Proxy
+npm run server
+
+# Client
+npm start
+```
+Open: [http://localhost:3000](http://localhost:3000)  
+
+---
+
+## 🖼️ Image URLs and Preview
+Image previews use the proxy to prevent browser blocks:  
+- `GET /api/fetch-image?url=...` → direct image URLs  
+- `GET /api/page-image?url=...` → extract `og:image` / first `<img>` from pages  
+
+If resolution fails, a safe **Picsum placeholder** is shown.  
+
+---
+
+## 📝 Brief Write‑Up  
+This app combines a secure backend with robust visual search.  
+- **Backend:** Express proxy keeps the Unsplash key server‑side and requires a password, preventing secret leakage.  
+- **Endpoints:** Stream image bytes with correct headers so pasted product pages render previews without ORB/CORS errors.  
+- **Client:** MobileNet embeddings are computed for uploaded + candidate images, cosine similarity ranks items for better relevance.  
+- **UI:** Minimal, responsive, gradient background, safe fallbacks, clear status messaging.  
+- **Security:** Secrets distributed as `.env.enc` via AES‑GCM; server unlocks with a passphrase at startup.  
+
+
+## 📦 Repository
+GitHub: [Visual Product Matcher](https://github.com/YEGNESWAR07/Visual-Product-Matcher)  
+
+---
+
+
+
+## 📜 License
+This project is licensed under the MIT License.  
+
+---
+
