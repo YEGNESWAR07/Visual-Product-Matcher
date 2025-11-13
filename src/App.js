@@ -40,7 +40,8 @@ export default function App() {
       const { results: matches } = await computeSimilarities(imageSrc, items);
       setResults(matches);
     } catch (e) {
-      setError('Failed to compute similarities.');
+      console.error('Error in handleImageSelected:', e);
+      setError('Failed to compute similarities. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -57,6 +58,7 @@ export default function App() {
       setResults(matches);
       setDetectedCategory(cat);
     } catch (e) {
+      console.error('Error in handleCategorySelect:', e);
       setError('Failed to update results for selected category.');
     } finally {
       setLoading(false);
@@ -88,6 +90,11 @@ export default function App() {
               <CategoryChips selected={selectedCategory} onSelect={handleCategorySelect} />
             </div>
             <ProductList results={results} />
+          </div>
+        )}
+        {!loading && uploadedImage && results.length === 0 && !error && (
+          <div className="mt-6 text-center text-gray-500">
+            <p>No matching products found. Try uploading a different image or selecting a category.</p>
           </div>
         )}
       </div>

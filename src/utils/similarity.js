@@ -105,6 +105,7 @@ function mapLabelToCategory(label) {
   if (/(drone|toy|board|puzzle|figure)/.test(L)) return 'Toys & Games';
   if (/(car|seat|tire|mount)/.test(L)) return 'Automotive';
   if (/(book|novel|magazine|paper)/.test(L)) return 'Books';
+  if (/(bag|backpack|belt|wallet|sunglasses|accessories)/.test(L)) return 'Accessories';
   return '';
 }
 

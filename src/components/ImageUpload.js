@@ -115,7 +115,7 @@ export default function ImageUpload({ onSelect, loading }) {
       </div>
       {localPreview && (
         <div className="mt-4">
-          <img src={localPreview} alt="Preview" referrerPolicy="no-referrer" className="max-h-64 rounded-md border shadow" />
+          <img src={localPreview} alt="Preview" className="max-h-64 rounded-md border shadow" />
         </div>
       )}
     </div>

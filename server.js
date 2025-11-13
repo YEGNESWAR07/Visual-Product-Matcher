@@ -52,6 +52,22 @@ function isHttpUrl(u) {
   }
 }
 
+// Map a free-text query to one of our known categories
+function mapQueryToCategory(q) {
+  const L = String(q || '').toLowerCase();
+  if (/(shirt|jeans|dress|sneaker|shoe|hoodie|jacket|coat|sock|clothing|apparel)/.test(L)) return 'Clothing';
+  if (/(watch|phone|smartphone|laptop|keyboard|mouse|monitor|headphone|camera|speaker|electronics|earbud)/.test(L)) return 'Electronics';
+  if (/(sofa|chair|table|desk|bed|lamp|bookshelf|furniture)/.test(L)) return 'Furniture';
+  if (/(blender|coffee|microwave|toaster|oven|vacuum|kitchen)/.test(L)) return 'Home & Kitchen';
+  if (/(yoga|helmet|bottle|tennis|racket|fitness|ball|sport|outdoor|football|basketball)/.test(L)) return 'Sports & Outdoors';
+  if (/(hair|dryer|toothbrush|makeup|serum|cosmetic|beauty)/.test(L)) return 'Beauty';
+  if (/(drone|toy|board|puzzle|figure|game)/.test(L)) return 'Toys & Games';
+  if (/(car|seat|tire|mount|automotive)/.test(L)) return 'Automotive';
+  if (/(book|novel|magazine|paper|books)/.test(L)) return 'Books';
+  if (/(bag|backpack|belt|wallet|sunglasses|accessories)/.test(L)) return 'Accessories';
+  return '';
+}
+
 // Fetch a remote image and return bytes with correct headers to avoid ORB/CORS issues
 app.get('/api/fetch-image', async (req, res) => {
   try {
@@ -146,10 +162,12 @@ app.get('/api/search', async (req, res) => {
       return res.status(r.status).json({ error: 'Unsplash error', details: text });
     }
     const data = await r.json();
+    const itemCategory = mapQueryToCategory(query);
     const items = (data.results || []).map((itm) => ({
       id: itm.id,
       title: itm.alt_description || itm.description || query,
-      category: '',
+      // Align category to the mapped category, not the raw query
+      category: itemCategory,
       imageUrl: (itm.urls && (itm.urls.small || itm.urls.thumb || itm.urls.raw)) || '',
     }));
     res.json({ items });
